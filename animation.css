@@ -1,0 +1,87 @@
+.panel{
+	cursor:url(images/cursor.png) 32 32, crosshair;
+}
+.taregt,
+.target[status=broken1]{
+	background: none;
+}
+.target>div{
+	width: 30px;
+	height: 30px;
+	background-image: url(images/target.png);
+	float: left; 
+}
+.target-1{
+ 	background-position: left top;
+}
+.target-2{
+ 	background-position: right top;
+} 
+.target-3{
+ 	background-position: left bottom;
+} 
+.target-4{
+ 	background-position: right bottom;
+}
+.target[status=broken1] .target-1{
+	-webkit-animation: broken1 0.8s;
+}
+.target[status=broken1] .target-2{
+	-webkit-animation: broken2 0.8s;
+}
+.target[status=broken1] .target-3{
+	-webkit-animation: broken3 0.8s;
+}
+.target[status=broken1] .target-4{
+	-webkit-animation: broken4 0.8s;
+}
+@-webkit-keyframes broken1 {
+0%{
+	-webkit-transform: translate(0,0);
+	opacity:1;
+}
+100%{
+	-webkit-transform:translate(-30px,-30px);
+	opacity:0;
+}}
+@-webkit-keyframes broken2 {
+0%{
+	-webkit-transform: translate(0,0);
+	opacity:1;
+}
+100%{
+	-webkit-transform:translate(30px,-30px);
+	opacity:0;
+}}
+@-webkit-keyframes broken3 {
+0%{
+	-webkit-transform: translate(0,0);
+	opacity:1;
+}
+100%{
+	-webkit-transform:translate(-30px,30px);
+	opacity:0;
+}}
+@-webkit-keyframes broken4 {
+0%{
+	-webkit-transform: translate(0,0);
+	opacity:1;
+}
+100%{
+	-webkit-transform:translate(30px,30px);
+	opacity:0;
+}}
+.score-box.finished {
+	-webkit-animation:finishedText 0.8s;
+}
+@-webkit-keyframes finishedText {
+0%{
+	-webkit-transform: translate(0,0);
+	opacity:1;
+}
+100%{
+	-webkit-transform:translate(0px,200px);
+	opacity:1;
+}}
+
+
